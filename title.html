@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Welcome | Krishna</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      height: 100vh;
+      background: linear-gradient(135deg, #00c6ff, #0072ff);
+      background-size: 400% 400%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      overflow: hidden;
+      animation: gradientMove 10s ease infinite alternate;
+    }
+
+    @keyframes gradientMove {
+      0% { background-position: left; }
+      100% { background-position: right; }
+    }
+
+    h1 {
+      color: white;
+      font-size: 2.8em;
+      text-align: center;
+      margin-bottom: 20px;
+      animation: fadeIn 2s ease forwards;
+    }
+
+    p {
+      color: #f0f0f0;
+      font-size: 1.2em;
+      margin-bottom: 40px;
+      animation: fadeIn 3s ease forwards;
+    }
+
+    .welcome-btn {
+      padding: 20px 60px;
+      font-size: 1.5em;
+      border: none;
+      border-radius: 50px;
+      background: linear-gradient(to right, #ff5e62, #ff9966);
+      color: white;
+      cursor: pointer;
+      transition: transform 0.3s, box-shadow 0.3s;
+      animation: fadeIn 4s ease forwards;
+    }
+
+    .welcome-btn:hover {
+      transform: scale(1.1);
+      box-shadow: 0 0 30px #ff9966;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+<body>
+  <h1>🌟 Welcome to My World 🌟</h1>
+  <p>Hi there! I’m so glad you’re here today.</p>
+  <button class="welcome-btn" id="enterBtn">Enter</button>
+
+  <script>
+    document.getElementById("enterBtn").addEventListener("click", function(){
+      // JavaScript to open intro page
+      window.location.href = "intro.html"; // change to your intro page path
+    });
+  </script>
+</body>
+</html>
